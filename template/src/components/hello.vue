@@ -22,7 +22,16 @@
 
 <script lang="ts">
 import Vue from "vue";
+{{#vueClassComponent}}import Component from "vue-class-component";{{/vueClassComponent}}
 
+{{#vueClassComponent}}
+@Component
+export default class Hello extends Vue {
+  name: string = "hello";
+  msg: string = "Welcome to Your Vue.js App";
+};
+{{/vueClassComponent}}
+{{^vueClassComponent}}
 interface Hello extends Vue {
   msg: string;
 }
@@ -35,6 +44,7 @@ export default {
     };
   },
 } as Vue.ComponentOptions<Hello>;
+{{/vueClassComponent}}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

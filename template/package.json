@@ -64,7 +64,8 @@
     "shelljs": "^0.7.6",
     "ts-loader": "^2.0.1",
     "typescript": "^2.2.1",
-    "rimraf": "^2.6.0",
+    "rimraf": "^2.6.0",{{#vueClassComponent}}
+    "vue-class-component": "^5.0.0",{{/vueClassComponent}}
     "url-loader": "^0.5.7",
     "vue-loader": "^11.1.4",
     "vue-style-loader": "^2.0.0",

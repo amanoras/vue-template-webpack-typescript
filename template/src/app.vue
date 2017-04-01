@@ -9,10 +9,19 @@
 
 <script lang="ts">
 import Vue from "vue";
+{{#vueClassComponent}}import Component from "vue-class-component";{{/vueClassComponent}}
 
+{{#vueClassComponent}}
+@Component
+export default class App extends Vue {
+  name =  "app";
+};
+{{/vueClassComponent}}
+{{^vueClassComponent}}
 export default {
   name: "app",
 } as Vue.ComponentOptions<Vue>;
+{{/vueClassComponent}}
 </script>
 
 <style>
